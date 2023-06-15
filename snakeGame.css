@@ -1,0 +1,276 @@
+/* @font-face {
+    font-family: "game";
+    src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button:focus {
+    outline: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+    color: #6e7888;
+}
+
+body {
+    background-color: #222738;
+    color: #6e7888;
+}
+
+.snakeTxt {
+    margin-top: 15px;
+}
+
+.mainSnake {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+canvas {
+    background-color: #181825;
+}
+
+.containerSn {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#ui {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    flex-flow: column;
+    margin-left: 10px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+h2 {
+    font-weight: 200;
+    transform: rotate(270deg);
+}
+
+#score {
+    margin-top: 60px;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.noselect {
+    user-select: none;
+}
+
+#replay {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(66, 119, 224);
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    transition: all 0.7s;
+    margin-left: 23px;
+    border: none;
+    border-radius: 10px;
+    transform: rotate(270deg);
+}
+
+#replay:hover {
+    background-color: #fff;
+    color: rgb(66, 119, 224);
+    border: none;
+}
+
+#replay svg {
+    margin-right: 8px;
+}
+
+@media (max-width: 600px) {
+    #replay {
+        margin-bottom: 20px;
+    }
+
+    #replay,
+    h2 {
+        transform: rotate(0deg);
+    }
+
+    #ui {
+        flex-flow: row wrap;
+        margin-bottom: 20px;
+    }
+
+    #score {
+        margin-top: 0;
+        margin-left: 20px;
+    }
+
+    .container {
+        flex-flow: column wrap;
+    }
+}
+
+#author {
+    width: 100%;
+    bottom: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: inherit;
+    text-transform: uppercase;
+    padding-left: 35px;
+}
+
+#author span {
+    font-size: 10px;
+    margin-left: 20px;
+    color: inherit;
+    letter-spacing: 4px;
+}
+
+#author h1 {
+    font-size: 25px;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+} */
+
+
+.snakeBody {
+    overflow-x: hidden;
+    background-color: #222738;
+}
+
+
+#difficulty-selection {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#game-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+canvas {
+    background-color: #181825;
+    border: 10px solid #fff;
+}
+
+.snakeH2 {
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.7;
+    color: rgb(66, 119, 224);
+    font-family: 'Press Start 2P', cursive;
+}
+
+#easy,
+#medium,
+#hard {
+    padding: 10px 20px;
+    background-color: rgb(66, 119, 224);
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    transition: all 0.7s;
+    margin-left: 23px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+#easy:hover,
+#medium:hover,
+#hard:hover {
+    background-color: #fff;
+    color: rgb(66, 119, 224);
+}
+
+#score-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#score {
+    font-size: 18px;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(66, 119, 224);
+}
+
+#game-over {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#game-over h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#game-over button {
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.gameBack {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(66, 119, 224);
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    transition: all 0.7s;
+    margin-left: 23px;
+    border-radius: 10px;
+}
+
+.gameBack:hover {
+    background-color: #fff;
+    color: rgb(66, 119, 224);
+}
+
+.site {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(66, 119, 224);
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    transition: all 0.7s;
+    margin-left: 23px;
+    border-radius: 10px;
+}
+
+.site:hover {
+    background-color: #fff;
+    color: rgb(66, 119, 224);
+}

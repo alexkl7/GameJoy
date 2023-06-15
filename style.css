@@ -1,0 +1,1310 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    position: relative;
+}
+
+body {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #fff;
+}
+
+/* ----------------------------- ГЛАВНАЯ СТРАНИЦА --------------------------- */
+
+.header {
+    position: static;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+}
+
+.headerGames {
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.intro {
+    max-height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    background: url("cover.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.intro:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.intro__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.intro__title {
+    margin: 0;
+    font-size: 45px;
+    color: #fff;
+    text-align: center;
+}
+
+.video {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 56.25%;
+}
+
+.video__media {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.headerInner {
+    /* padding-top: 40px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoTxt {
+    font-family: 'Sigmar', cursive;
+    color: rgb(66, 119, 224);
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.logoTxt:hover {
+    color: rgb(119, 157, 232);
+}
+
+.menuList {
+    display: flex;
+    gap: 55px;
+}
+
+.menuListLink {
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(66, 119, 224);
+    text-transform: uppercase;
+    font-weight: 800;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.menuListLink:hover {
+    color: rgb(119, 157, 232);
+}
+
+.sliderLogo {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 48px;
+    line-height: 1.3;
+    color: rgb(66, 119, 224);
+    font-family: 'Press Start 2P', cursive;
+}
+
+.sliderText {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgb(66, 119, 224);
+    font-family: 'Press Start 2P', cursive;
+}
+
+.mainArrow {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.arrow {
+    /* width: 50px; */
+    position: absolute;
+    left: calc(50% - 25px);
+    bottom: -100px;
+    animation: arrowDown 2s infinite;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* -------------------------- QUIZGAME ---------------------------*/
+
+.games {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(66, 119, 224);
+    padding-bottom: 30px;
+}
+
+.gamesLogo {
+    font-size: 48px;
+    line-height: 1.3;
+    letter-spacing: 20px;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 30px;
+}
+
+.game-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-block {
+    width: 250px;
+    height: 500px;
+    background-color: #fff;
+    border: 5px solid rgb(101, 135, 202);
+    border-radius: 30px;
+    margin-right: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 45px;
+}
+
+.slide {
+    width: 100%;
+    height: 300px;
+    /* object-fit: cover; */
+    background-size: cover;
+    /* opacity: 0.7; */
+    border-radius: 15px;
+}
+
+h3 {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.7;
+    color: rgb(66, 119, 224);
+    font-family: 'Press Start 2P', cursive;
+}
+
+.mainGame {
+    width: 900px;
+    height: 530px;
+}
+
+.mainGameImage {
+    margin-left: 100px;
+    width: 100%;
+    height: 470px;
+    background-size: cover;
+    border-radius: 15px;
+    margin-top: 15px;
+    border: 5px solid #fff;
+}
+
+.mainGameH3 {
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+}
+
+.gameButtonSnake {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 30px 60px;
+    background-color: #fff;
+    color: rgb(66, 119, 224);
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    transition: all 0.7s;
+    margin-left: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.gameButtonSnake:hover {
+    background-color: rgb(66, 119, 224);
+    color: #fff;
+}
+
+.gameButton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(66, 119, 224);
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    transition: all 0.7s;
+    margin-left: 23px;
+    border-radius: 10px;
+}
+
+.gameButton:hover {
+    background-color: #fff;
+    color: rgb(66, 119, 224);
+}
+
+.quizArea {
+    width: 800px;
+    height: 600px;
+    background-color: rgb(66, 119, 224);
+    margin: 0 auto;
+    margin-top: 25px;
+    border: 5px solid #fff;
+    border-radius: 15px;
+}
+
+.categoryH2 {
+    font-size: 24px;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#category-select,
+#quiz-container,
+#result-container {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+}
+
+.category-btn {
+    margin: 30px auto;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: rgb(66, 119, 224);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    transition: all 0.7s;
+    margin-left: 50px;
+}
+
+.category-btn:hover {
+    background-color: rgb(66, 119, 224);
+    color: #fff;
+}
+
+#back-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: rgb(66, 119, 224);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    transition: all 0.7s;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#back-btn:hover {
+    background-color: rgb(66, 119, 224);
+    color: #fff;
+}
+
+#question {
+    margin: 20px 0;
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    font-size: 18px;
+    line-height: 50px;
+    margin-bottom: 30px;
+}
+
+#answers {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.answer-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: rgb(66, 119, 224);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    transition: all 0.7s;
+}
+
+.answer-btn:hover {
+    background-color: rgb(66, 119, 224);
+    color: #fff;
+}
+
+#result-text {
+    margin: 20px 0;
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    font-size: 18px;
+    line-height: 50px;
+    margin-bottom: 30px;
+}
+
+/* ----------------------------------------------------------------- */
+
+/* ------------------ БЛОК ОТЗЫВОВ --------------------------------- */
+
+.peoples {
+    position: relative;
+    background-color: #fff;
+}
+
+.reviews {
+    font-size: 48px;
+    line-height: 1.3;
+    letter-spacing: 20px;
+    color: rgb(66, 119, 224);
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.peoplesBlock {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 950px;
+    height: 500px;
+    background-color: rgb(66, 119, 224);
+    border: 5px solid #fff;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.peoplesBlockTwo {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 950px;
+    height: 500px;
+    background-color: rgb(66, 119, 224);
+    border: 5px solid #fff;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.5s ease-in-out;
+    display: none;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.peoplesBlockTwo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: right center;
+    animation: slide-in 0.5s forwards;
+}
+
+.slide-left {
+    animation: slide-out 0.5s forwards;
+    animation-fill-mode: forwards;
+}
+
+.slide-in {
+    animation: slide-in 0.5s forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.review-block {
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    width: 350px;
+    height: 200px;
+    border: 5px solid #fff;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.review-image {
+    width: 135px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 5px;
+    overflow: hidden;
+    border: 3px solid rgb(66, 119, 224);
+}
+
+.review-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.review-content h3 {
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 60px;
+    margin-left: 15px;
+}
+
+.review-content p {
+    color: #fff;
+    font-size: 10px;
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 1.5;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+/* ---------------------------------------------------------- */
+
+
+.contacts {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(66, 119, 224);
+}
+
+.contactsH2 {
+    font-size: 48px;
+    line-height: 1.3;
+    letter-spacing: 20px;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 50px;
+}
+
+.containerCont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-details {
+    width: 500px;
+    height: 200px;
+    background-color: #fff;
+    margin-top: 100px;
+    border-radius: 10px;
+}
+
+.firstP {
+    margin-top: 65px;
+}
+
+.contact-details p {
+    color: rgb(66, 119, 224);
+    font-size: 16px;
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 1.5;
+    margin-left: 15px;
+}
+
+#map {
+    margin: 0;
+    margin-top: 10px;
+    border: 10px solid #fff;
+    border-radius: 10px;
+    height: 300px;
+    width: 300px;
+}
+
+/* --------------------------------------------------------- */
+
+/* ------------------------------ COUPLEGAME -------------------------------------------- */
+
+.logoCoupleMain {
+    color: #fff;
+}
+
+.logo-couple {
+    font-size: 48px;
+    line-height: 1.3;
+    letter-spacing: 20px;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.couplep {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 15px;
+}
+
+.difficulty-btn {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    transition: all 0.7s;
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+
+.difficulty-btn:hover {
+    background-color: rgb(66, 119, 224);
+    color: #fff;
+}
+
+.coupleh2 {
+    font-size: 24px;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+#restart-btn {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(66, 119, 224);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    transition: all 0.7s;
+}
+
+#restart-btn:hover {
+    background-color: #fff;
+    color: rgb(66, 119, 224);
+}
+
+.couple-text {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 17px;
+}
+
+.coupleBlock {
+    width: 770px;
+    height: 600px;
+    background-color: #bbc5f4;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.game-container {
+    width: 700px;
+    height: 700px;
+    margin: 0 auto;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.bodyCouple {
+    background-color: rgb(66, 119, 224);
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    width: 720px;
+    height: 500px;
+}
+
+.square {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(66, 119, 224);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.square-front,
+.square-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.square-front {
+    transform: rotateY(0deg);
+}
+
+.square-back {
+    background-color: #fff;
+    transform: rotateY(180deg);
+}
+
+.square.flip .square-front {
+    transform: rotateY(180deg);
+}
+
+.square.flip .square-back {
+    transform: rotateY(0deg);
+}
+
+.square-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    font-size: 14px;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    text-align: center;
+}
+
+.hide {
+    background-color: rgb(66, 119, 224);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    animation: flip-hide 0.5s forwards;
+}
+
+.show {
+    /* background-color: var(--color); */
+    animation: flip-show 0.5s forwards;
+}
+
+.difficulty {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.difficulty-btn {
+    margin-right: 10px;
+    background-color: rgb(66, 119, 224);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.difficulty-btn:hover {
+    background-color: rgb(36, 79, 164);
+}
+
+/* --------------------------------------------------------------- */
+
+
+/* --------------------- КРЕСТИКИ НОЛИКИ ------------------------- */
+
+.board {
+    font-size: 48px;
+    line-height: 1.3;
+    letter-spacing: 20px;
+    color: rgb(66, 119, 224);
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#board {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: rgb(66, 119, 224);
+    margin-bottom: 30px;
+}
+
+.cell {
+    width: calc(400px / 3);
+    height: calc(400px / 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    border: 5px solid #fff;
+    cursor: pointer;
+}
+
+.gameBtn {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: rgb(66, 119, 224);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.7s;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.gameBtn:hover {
+    background-color: rgb(66, 119, 224);
+    color: #fff;
+}
+
+/* -------------------------------------------------------------------- */
+
+/* ------------------------------------- FOOTER ------------------------------------- */
+
+
+
+
+/* ---------------------------------------------------------------------------------- */
+
+@media (max-width: 820px) {
+
+    .reviews {
+        font-size: 30px;
+    }
+
+    .container {
+        max-width: 540px;
+    }
+
+    .intro {
+        display: none;
+    }
+
+    .headerInner {
+        display: block;
+    }
+
+    .logoTxt {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .menuListLink {
+        display: block;
+        margin-left: 50%;
+    }
+
+    .mainGame {
+        width: 300px;
+        height: 310px;
+    }
+
+    .mainGameImage {
+        width: 300px;
+        height: 310px;
+    }
+
+    .game-row {
+        flex-wrap: wrap;
+    }
+
+    .game-block {
+        margin-left: 25%;
+    }
+
+    .peoplesBlock {
+        width: 400px;
+        height: 300px;
+    }
+
+    .peoplesBlockTwo {
+        width: 400px;
+        height: 300px;
+    }
+
+    .review-block {
+        width: 180px;
+        height: 100px;
+    }
+
+    .review-image {
+        width: 100px;
+        height: 50px;
+        border-radius: 50%;
+        margin-left: 5px;
+        overflow: hidden;
+        border: 3px solid rgb(66, 119, 224);
+    }
+
+    .review-content h3 {
+        font-size: 10px;
+        margin: 0;
+    }
+
+    .review-content p {
+        font-size: 4px;
+    }
+
+    .contacts {
+        margin-bottom: 50px;
+    }
+
+    .containerCont {
+        flex-wrap: wrap;
+    }
+
+    #map {
+        margin-left: 12%;
+    }
+
+    .backLogo {
+        font-size: 48px;
+        display: block;
+        padding: 0;
+    }
+
+    .coupleBlock {
+        width: 450px;
+        height: 300px;
+    }
+
+    .quizArea {
+        width: 490px;
+        height: 700px;
+    }
+
+    .category-btn {
+        margin: 7px;
+        padding: 5px 7px;
+        margin-right: 100px;
+    }
+
+    #back-btn {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    #question {
+        font-size: 8px;
+        line-height: 20px;
+        margin-right: 100px;
+    }
+
+    .answer-btn {
+        padding: 5px 10px;
+        font-size: 9px;
+    }
+
+    #answers {
+        margin-right: 110px;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    #result-text {
+        font-size: 8px;
+        margin-right: 110px;
+    }
+
+    #restart-btn {
+        margin-right: 90px;
+    }
+
+
+
+
+    .coupleBlock {
+        width: 500px;
+        height: 320px;
+    }
+
+    .quizArea {
+        width: 400px;
+        height: 250px;
+    }
+
+    .logo-couple {
+        color: rgb(66, 119, 224);
+        font-size: 22px;
+    }
+
+    .couple-text {
+        color: rgb(66, 119, 224);
+        font-size: 14px;
+    }
+
+    .categoryH2 {
+        font-size: 12px;
+        margin-right: 200px;
+    }
+
+    .quizBody {
+        overflow-x: hidden;
+    }
+
+    .square-label {
+        font-size: 6px;
+    }
+
+    .square {
+        border: 1px solid #fff;
+    }
+
+    .game-container {
+        width: 280px;
+        height: 280px;
+    }
+
+    .game-board {
+        width: 300px;
+        height: 220px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .square {
+        width: 100%;
+        height: 100%;
+    }
+
+
+}
+
+@media (max-width: 520px) {
+
+    .header {
+        margin-top: 50px;
+    }
+
+    .container {
+        max-width: 370px;
+    }
+
+    .intro {
+        display: none;
+    }
+
+    .sliderLogo {
+        margin: 0;
+        font-size: 24px;
+        margin-bottom: 50px;
+    }
+
+    .sliderText {
+        font-size: 12px;
+    }
+
+    .headerInner {
+        display: block;
+    }
+
+    .logoTxt {
+        text-align: center;
+        padding: 0;
+        font-size: 22px;
+    }
+
+    .menuListLink {
+        display: block;
+        margin-left: 5%;
+        font-size: 12px;
+        margin-bottom: 30px;
+    }
+
+    .mainGame {
+        width: 220px;
+        height: 230px;
+    }
+
+    .mainGameImage {
+        width: 220px;
+        height: 230px;
+        margin: 0;
+        margin-top: 15px;
+        margin-left: 30%;
+    }
+
+    .game-row {
+        flex-wrap: wrap;
+    }
+
+    .game-block {
+        margin-left: 15%;
+    }
+
+    .peoplesBlock {
+        width: 300px;
+        height: 300px;
+    }
+
+    .peoplesBlockTwo {
+        width: 300px;
+        height: 300px;
+    }
+
+    .review-block {
+        width: 120px;
+        height: 100px;
+    }
+
+    .review-image {
+        width: 190px;
+        height: 30px;
+        border-radius: 50%;
+        margin-left: 5px;
+        overflow: hidden;
+        border: 3px solid rgb(66, 119, 224);
+    }
+
+    .review-content h3 {
+        font-size: 6px;
+        margin: 0;
+    }
+
+    .review-content p {
+        font-size: 6px;
+        line-height: 7px;
+        letter-spacing: 0;
+    }
+
+    #map {
+        margin-top: 30px;
+        margin-left: 9%;
+        border: 10px solid #fff;
+        border-radius: 10px;
+        height: 300px;
+        width: 300px;
+    }
+
+    .contacts {
+        margin-bottom: 10px;
+    }
+
+    .contactsH2 {
+        font-size: 28px;
+        margin: 0;
+    }
+
+    .contact-details {
+        margin-top: 10px;
+    }
+
+    .containerCont {
+        flex-wrap: wrap;
+    }
+
+    .backLogo {
+        font-size: 36px;
+        display: block;
+        padding: 0;
+    }
+
+    .coupleBlock {
+        width: 490px;
+        height: 320px;
+    }
+
+    .quizArea {
+        width: 290px;
+        height: 250px;
+    }
+
+    .logo-couple {
+        color: rgb(66, 119, 224);
+        font-size: 22px;
+    }
+
+    .couple-text {
+        color: rgb(66, 119, 224);
+        font-size: 14px;
+    }
+
+    .categoryH2 {
+        font-size: 12px;
+        margin-right: 200px;
+    }
+
+    .quizBody {
+        overflow-x: hidden;
+    }
+
+    .quizArea {
+        width: 400px;
+        height: 350px;
+    }
+
+    .square-label {
+        font-size: 6px;
+    }
+
+    .square {
+        border: 1px solid #fff;
+    }
+
+    .game-container {
+        width: 280px;
+        height: 280px;
+    }
+
+    .game-board {
+        width: 300px;
+        height: 220px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .square {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .category-btn {
+        display: block;
+        margin-left: 300px;
+        padding: 5px 10px;
+        font-size: 8px;
+        margin: 0;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    #back-btn {
+        padding: 5px 10px;
+        font-size: 8px;
+        margin-right: 90px;
+    }
+
+    #question {
+        font-size: 8px;
+        line-height: 20px;
+    }
+
+    .answer-btn {
+        padding: 3px 5px;
+        font-size: 9px;
+    }
+
+    #answers {
+        flex-direction: column;
+        /* s */
+    }
+
+    .fff {
+        color: #fff;
+        font-size: 22px;
+    }
+
+    .fffp {
+        color: #fff;
+        font-size: 12px;
+    }
+
+    .coupleBlock {
+        width: 330px;
+    }
+
+    
+}

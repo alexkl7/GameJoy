@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameJoy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Slab&family=Sigmar&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="headerGames">
+            <div class="headerInner">
+                <a href="index.html" class="logo">
+                    <h1 class="logoTxt">GaMeJoY</h1>
+                </a>
+            </div>
+        </div>
+
+        <h1 class="logo-couple">КРЕСТИКИ-НОЛИКИ</h1>
+        <p class="couple-text">Вперед к победам!</p>
+
+        <button class="gameBtn" onclick="resetGame()">Начать заново</button>
+        <div id="board">
+            <div class="cell" onclick="makeMove(0)"></div>
+            <div class="cell" onclick="makeMove(1)"></div>
+            <div class="cell" onclick="makeMove(2)"></div>
+            <div class="cell" onclick="makeMove(3)"></div>
+            <div class="cell" onclick="makeMove(4)"></div>
+            <div class="cell" onclick="makeMove(5)"></div>
+            <div class="cell" onclick="makeMove(6)"></div>
+            <div class="cell" onclick="makeMove(7)"></div>
+            <div class="cell" onclick="makeMove(8)"></div>
+        </div>
+
+        <script src="js/snake.js"></script>
+
+</body>
+
+</html>

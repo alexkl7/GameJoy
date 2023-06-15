@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameJoy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Slab&family=Sigmar&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="quizBody">
+
+    <div class="container">
+
+        <div class="headerGames">
+            <div class="headerInner">
+                <a href="index.html" class="logo">
+                    <h1 class="logoTxt">GaMeJoY</h1>
+                </a>
+            </div>
+
+            <h1 class="logo-couple">ОВЕТЬ НА ВОПРОСЫ</h1>
+            <p class="couple-text">Выбери категорию вопросов и приступай к игре!</p>
+
+            <div class="quizArea">
+
+<div id="category-select">
+    <h2 class="categoryH2">Выберите категорию:</h2>
+    <button class="category-btn" onclick="startQuiz('История')">История</button>
+    <button class="category-btn" onclick="startQuiz('География')">География</button>
+    <!-- <button class="category-btn" onclick="startQuiz('Математика')">Математика</button>
+    <button class="category-btn" onclick="startQuiz('Литература')">Литература</button>
+    <button class="category-btn" onclick="startQuiz('Физика')">Физика</button> -->
+</div>
+
+<div id="quiz-container">
+    <button id="back-btn" onclick="showCategorySelect()">Вернуться назад</button>
+    <div id="question"></div>
+    <div id="answers">
+        <button class="answer-btn" onclick="checkAnswer(0)"></button>
+        <button class="answer-btn" onclick="checkAnswer(1)"></button>
+        <button class="answer-btn" onclick="checkAnswer(2)"></button>
+        <button class="answer-btn" onclick="checkAnswer(3)"></button>
+    </div>
+</div>
+
+                <div id="result-container">
+                    <div id="result-text"></div>
+                    <button id="restart-btn" onclick="showCategorySelect()">Начать заново</button>
+                </div>
+            </div>
+
+        </div>
+
+
+        <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameJoy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Slab&family=Sigmar&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="snakeGame.css">
+</head>
+
+<body class="snakeBody">
+
+    <!-- <div class="container">
+
+        <div class="snakeLogo">
+            <a href="index.html" class="logo snakeMainLogo">
+                <h1 class="logoTxt snakeTxt">GaMeJoY</h1>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="mainSnake">
+
+        <div class="containerSn noselect">
+            <div class="wrapper">
+                <button id="replay">
+                    <i class="fas fa-play"></i>
+                    НАЧАТЬ ЗАНОВО
+                </button>
+                <div id="canvas">
+
+                </div>
+                <div id="ui">
+                    <h2>РЕКОРД
+                    </h2>
+                    <span id="score">00</span>
+                </div>
+            </div>
+        </div>
+
+    </div> -->
+
+    <div id="difficulty-selection">
+        <h2 class="snakeH2">Выберите уровень сложности</h2>
+        <button id="easy" onclick="startGame('easy')">Легкий</button>
+        <button id="medium" onclick="startGame('medium')">Средний</button>
+        <button id="hard" onclick="startGame('hard')">Сложный</button>
+        <a href="index.html" class="site" target="_blank">Вернуться на GameJoy</a>
+    </div>
+
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="score-container">
+            <div id="score">Рекорд: 0</div>
+            <a href="snkaeGame.html" class="gameBack">Вернуться назад</a>
+            <a href="index.html" class="site" target="_blank">Вернуться на GameJoy</a>
+        </div>
+        <div id="game-over">
+            <h2>Game Over</h2>
+        </div>
+    </div>
+
+
+
+    <script src="js/snakeGame.js"></script>
+
+</body>
+
+</html>
